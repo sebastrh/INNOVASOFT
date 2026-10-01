@@ -1,0 +1,213 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Marketing Manager</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="inicio-container">
+
+    <h1>Inicio</h1>
+
+    <p class="subtitulo">
+      Consulta tus publicaciones, reportes y pagos.
+    </p>
+
+    <h2>Hola, Usuario</h2>
+
+    <ion-card class="resumen-card">
+      <ion-card-content>
+
+        <ion-item lines="full">
+          <ion-icon
+            name="document-text-outline"
+            slot="start">
+          </ion-icon>
+
+          <ion-label>
+            Publicaciones este mes:
+          </ion-label>
+
+          <strong>8</strong>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-icon
+            name="bar-chart-outline"
+            slot="start">
+          </ion-icon>
+
+          <ion-label>
+            Reportes disponibles:
+          </ion-label>
+
+          <strong>3</strong>
+        </ion-item>
+
+        <ion-button
+          expand="block"
+          routerLink="/pagos">
+          Ir a pagos
+        </ion-button>
+
+      </ion-card-content>
+    </ion-card>
+
+
+    <h2>Accesos rápidos</h2>
+
+    <div class="accesos-grid">
+
+      <ion-button
+        fill="outline"
+        routerLink="/calendario">
+
+        <ion-icon
+          name="calendar-outline"
+          slot="start">
+        </ion-icon>
+
+        Calendario
+
+      </ion-button>
+
+
+      <ion-button
+        fill="outline"
+        routerLink="/reportes">
+
+        <ion-icon
+          name="bar-chart-outline"
+          slot="start">
+        </ion-icon>
+
+        Reportes
+
+      </ion-button>
+
+
+      <ion-button
+        fill="outline"
+        routerLink="/pagos">
+
+        <ion-icon
+          name="card-outline"
+          slot="start">
+        </ion-icon>
+
+        Pagos
+
+      </ion-button>
+
+
+      <ion-button
+        fill="outline"
+        routerLink="/mi-cuenta">
+
+        <ion-icon
+          name="person-outline"
+          slot="start">
+        </ion-icon>
+
+        Mi cuenta
+
+      </ion-button>
+
+    </div>
+
+
+    <h2>Próximas publicaciones</h2>
+
+
+    <ion-card routerLink="/detalle-publicacion">
+
+      <ion-card-content class="publicacion-item">
+
+        <ion-icon name="logo-instagram"></ion-icon>
+
+        <div>
+          <strong>Omelette de vegetales</strong>
+          <p>15/05/2025 09:00</p>
+        </div>
+
+        <ion-badge>
+          Programada
+        </ion-badge>
+
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-card routerLink="/detalle-publicacion">
+
+      <ion-card-content class="publicacion-item">
+
+        <ion-icon name="logo-facebook"></ion-icon>
+
+        <div>
+          <strong>Beneficios del omelette</strong>
+          <p>16/05/2025 10:00</p>
+        </div>
+
+        <ion-badge>
+          Programada
+        </ion-badge>
+
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-card routerLink="/detalle-publicacion">
+
+      <ion-card-content class="publicacion-item">
+
+        <ion-icon name="logo-instagram"></ion-icon>
+
+        <div>
+          <strong>Ingredientes frescos</strong>
+          <p>18/05/2025 12:00</p>
+        </div>
+
+        <ion-badge>
+          Publicada
+        </ion-badge>
+
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-card routerLink="/pagos">
+
+      <ion-card-content class="ultimo-pago">
+
+        <ion-icon name="card-outline"></ion-icon>
+
+        <span>
+          Último pago: Abril 2025 — Pagado
+        </span>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+</ion-content>

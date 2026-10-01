@@ -1,0 +1,128 @@
+:host {
+  --color-primary: #2B324E;
+  --color-secondary: #313E65;
+  --color-accent: #5B82BB;
+  --color-background: #E3E7EA;
+  --color-white: #FFFFFF;
+}
+
+ion-content {
+  --background: var(--color-background);
+}
+
+ion-toolbar {
+  --background: var(--color-primary);
+  --color: var(--color-white);
+}
+
+.inicio-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.subtitulo {
+  color: var(--color-secondary);
+  margin-top: 0;
+}
+
+ion-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  box-shadow: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.resumen-card {
+  border-left: 5px solid var(--color-accent);
+}
+
+ion-item {
+  --background: var(--color-white);
+  --color: var(--color-primary);
+}
+
+ion-icon {
+  color: var(--color-accent);
+  font-size: 22px;
+}
+
+ion-button {
+  --background: var(--color-primary);
+  --background-hover: var(--color-secondary);
+  --background-activated: var(--color-secondary);
+  --color: var(--color-white);
+  --border-radius: 10px;
+}
+
+.accesos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.accesos-grid ion-button {
+  --background: var(--color-white);
+  --color: var(--color-primary);
+  --border-color: var(--color-accent);
+
+  margin: 0;
+  height: 52px;
+}
+
+.publicacion-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.publicacion-item div {
+  flex: 1;
+}
+
+.publicacion-item p {
+  margin: 4px 0 0;
+  color: var(--color-secondary);
+  font-size: 14px;
+}
+
+ion-badge {
+  --background: var(--color-accent);
+  --color: var(--color-white);
+
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.ultimo-pago {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  .accesos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .publicacion-item {
+    align-items: flex-start;
+  }
+}
