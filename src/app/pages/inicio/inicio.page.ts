@@ -1,19 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonMenuButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonContent,
+  IonCard,
+  IonCardContent,
+  IonItem,
+  IonLabel,
+  IonBadge
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  standalone: true,
+  imports: [
+    RouterLink,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonMenuButton,
+    IonTitle,
+    IonButton,
+    IonIcon,
+    IonContent,
+    IonCard,
+    IonCardContent,
+    IonItem,
+    IonLabel,
+    IonBadge
+  ]
 })
-export class InicioPage implements OnInit {
+export class InicioPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }
