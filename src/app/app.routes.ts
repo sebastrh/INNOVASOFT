@@ -18,6 +18,13 @@ export const routes: Routes = [
     path: 'inicio',
     loadComponent: () => import('./pages/inicio/inicio.page').then( m => m.InicioPage)
   },
+
+  {
+  path: 'publicaciones',
+  loadComponent: () =>
+    import('./pages/publicaciones/publicaciones.component')
+      .then(m => m.PublicacionesComponent)
+},
   {
     path: 'calendario',
     loadComponent: () => import('./pages/calendario/calendario.page').then( m => m.CalendarioPage)

@@ -1,4 +1,3 @@
-
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,7 +11,7 @@ import {
   IonButton
 } from '@ionic/angular';
 
-import { LoginService } from '../../services/login.service';
+import { Login } from '../../estructuras/Login';
 
 @Component({
   selector: 'app-login',
@@ -34,19 +33,19 @@ export class LoginPage {
   usuario: string = '';
   contrasena: string = '';
 
-  private loginService = inject(LoginService);
+  private login = new Login();
   private router = inject(Router);
 
-  constructor() {}
+  iniciarSesion(): void {
 
-  iniciarSesion() {
-
-    const acceso = this.loginService.iniciarSesion(
+    const resultado = this.login.iniciarSesion(
       this.usuario,
       this.contrasena
     );
 
-    if (acceso) {
+    if (resultado) {
+
+      console.log(resultado);
 
       this.router.navigate(['/inicio']);
 
@@ -57,5 +56,4 @@ export class LoginPage {
     }
 
   }
-
 }
