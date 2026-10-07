@@ -1,13 +1,202 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>calendario</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Marketing Manager</ion-title>
+
+    <ion-buttons slot="end">
+
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">calendario</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+
+    <ion-item lines="none">
+
+      <ion-label>
+
+        <ion-text>
+          <h1>Calendario / Publicaciones</h1>
+        </ion-text>
+
+        <ion-note>
+          Visualiza tu contenido programado y publicado.
+        </ion-note>
+
+      </ion-label>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-select
+        label="Vista"
+        labelPlacement="stacked"
+        value="semana">
+
+        <ion-select-option value="semana">
+          Semana
+        </ion-select-option>
+
+      </ion-select>
+
+    </ion-item>
+
+
+    <ion-item lines="none">
+
+      <ion-label>
+        12 - 18 may 2025
+      </ion-label>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-label>
+
+        <h2>Lun 12/05</h2>
+
+        <h3>Omelette de vegetales</h3>
+
+        <ion-note>
+          12/05/2025 09:00
+        </ion-note>
+
+      </ion-label>
+
+      <ion-badge slot="end">
+        Programada
+      </ion-badge>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-label>
+
+        <h2>Mar 13/05</h2>
+
+        <ion-note>
+          Sin publicaciones
+        </ion-note>
+
+      </ion-label>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-label>
+
+        <h2>Mié 14/05</h2>
+
+        <h3>Beneficios del omelette</h3>
+
+        <ion-note>
+          14/05/2025 10:00
+        </ion-note>
+
+      </ion-label>
+
+      <ion-badge slot="end">
+        Programada
+      </ion-badge>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-label>
+
+        <h2>Jue 15/05</h2>
+
+        <ion-note>
+          Sin publicaciones
+        </ion-note>
+
+      </ion-label>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-label>
+
+        <h2>Vie 16/05</h2>
+
+        <h3>Ingredientes frescos</h3>
+
+        <ion-note>
+          16/05/2025 12:00
+        </ion-note>
+
+      </ion-label>
+
+      <ion-badge slot="end">
+        Programada
+      </ion-badge>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-label>
+
+        <h2>Sáb 17/05</h2>
+
+        <h3>Estilo de vida saludable</h3>
+
+        <ion-note>
+          17/05/2025 12:00
+        </ion-note>
+
+      </ion-label>
+
+      <ion-badge slot="end">
+        Publicada
+      </ion-badge>
+
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-label>
+
+        <h2>Dom 18/05</h2>
+
+        <ion-note>
+          Sin publicaciones
+        </ion-note>
+
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
 </ion-content>

@@ -13,6 +13,11 @@ export class Login implements ILogin {
             correo: "juan@gmail.com",
             password: "5678",
             nombre: "Usuario"
+        },
+        {
+            correo: "admin",
+            password: "admin",
+            nombre: "Administrador"
         }
     ];
 

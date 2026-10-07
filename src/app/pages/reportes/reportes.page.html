@@ -1,13 +1,209 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>reportes</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Reportes</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">reportes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+
+    <ion-item lines="none">
+      <ion-label>
+
+        <ion-text>
+          <h1>Reportes</h1>
+        </ion-text>
+
+        <ion-note>
+          Consulta los resultados de tus publicaciones.
+        </ion-note>
+
+      </ion-label>
+    </ion-item>
+
+
+    <ion-searchbar
+      placeholder="Buscar reporte...">
+    </ion-searchbar>
+
+
+    <ion-item>
+
+      <ion-select
+        label="Red social"
+        labelPlacement="stacked"
+        placeholder="Todas">
+
+        <ion-select-option value="todas">
+          Todas
+        </ion-select-option>
+
+        <ion-select-option value="facebook">
+          Facebook
+        </ion-select-option>
+
+        <ion-select-option value="instagram">
+          Instagram
+        </ion-select-option>
+
+      </ion-select>
+
+    </ion-item>
+
+
+    <ion-segment value="seguidores">
+
+      <ion-segment-button value="seguidores">
+        <ion-label>Seguidores</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="interaccion">
+        <ion-label>Interacción</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="reproducciones">
+        <ion-label>Reproducciones</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <ion-item lines="none">
+
+          <ion-label>
+
+            <h2>R-0001 Seguidores</h2>
+
+            <h3>
+              Guaymex y tu bienestar diario
+            </h3>
+
+            <ion-note>
+              Facebook · 12/05/2024
+            </ion-note>
+
+          </ion-label>
+
+          <ion-badge slot="end">
+            Disponible
+          </ion-badge>
+
+        </ion-item>
+
+
+        <ion-button
+          expand="block"
+          routerLink="/detalle-reporte">
+
+          Ver reporte
+
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <ion-item lines="none">
+
+          <ion-label>
+
+            <h2>R-0002 Interacción</h2>
+
+            <h3>
+              Ensaladas frescas para tu rutina
+            </h3>
+
+            <ion-note>
+              Instagram · 10/05/2024
+            </ion-note>
+
+          </ion-label>
+
+          <ion-badge slot="end">
+            Disponible
+          </ion-badge>
+
+        </ion-item>
+
+
+        <ion-button
+          expand="block"
+          routerLink="/detalle-reporte">
+
+          Ver reporte
+
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <ion-item lines="none">
+
+          <ion-label>
+
+            <h2>R-0003 Reproducciones</h2>
+
+            <h3>
+              Smoothies Guaymex en 30 segundos
+            </h3>
+
+            <ion-note>
+              Facebook · 08/05/2024
+            </ion-note>
+
+          </ion-label>
+
+          <ion-badge slot="end">
+            En revisión
+          </ion-badge>
+
+        </ion-item>
+
+
+        <ion-button
+          expand="block"
+          routerLink="/detalle-reporte">
+
+          Ver reporte
+
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+
+    <ion-item lines="none">
+
+      <ion-label>
+        Mostrando 1 a 3 de 8
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
+
 </ion-content>

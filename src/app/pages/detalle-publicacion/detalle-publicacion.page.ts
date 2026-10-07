@@ -1,19 +1,50 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonText,
+  IonNote,
+  IonBadge,
+  IonCard,
+  IonCardContent,
+  IonTextarea,
+  IonButton
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-detalle-publicacion',
   templateUrl: './detalle-publicacion.page.html',
   styleUrls: ['./detalle-publicacion.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  standalone: true,
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonText,
+    IonNote,
+    IonBadge,
+    IonCard,
+    IonCardContent,
+    IonTextarea,
+    IonButton
+  ]
 })
-export class DetallePublicacionPage implements OnInit {
+export class DetallePublicacionPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }

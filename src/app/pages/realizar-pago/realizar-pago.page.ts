@@ -1,19 +1,52 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonText,
+  IonNote,
+  IonSegment,
+  IonSegmentButton,
+  IonInput,
+  IonIcon,
+  IonButton
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-realizar-pago',
   templateUrl: './realizar-pago.page.html',
   styleUrls: ['./realizar-pago.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  standalone: true,
+  imports: [
+    RouterLink,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonText,
+    IonNote,
+    IonSegment,
+    IonSegmentButton,
+    IonInput,
+    IonIcon,
+    IonButton
+  ]
 })
-export class RealizarPagoPage implements OnInit {
+export class RealizarPagoPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }

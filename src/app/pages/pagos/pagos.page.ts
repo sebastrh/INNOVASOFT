@@ -1,19 +1,52 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonText,
+  IonNote,
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonBadge,
+  IonIcon
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-pagos',
   templateUrl: './pagos.page.html',
   styleUrls: ['./pagos.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  standalone: true,
+  imports: [
+    RouterLink,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonText,
+    IonNote,
+    IonButton,
+    IonCard,
+    IonCardContent,
+    IonBadge,
+    IonIcon
+  ]
 })
-export class PagosPage implements OnInit {
+export class PagosPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }

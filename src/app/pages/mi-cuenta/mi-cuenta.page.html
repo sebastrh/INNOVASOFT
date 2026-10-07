@@ -1,13 +1,139 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>mi-cuenta</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Mi cuenta</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">mi-cuenta</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+
+    <ion-item lines="none">
+      <ion-label>
+
+        <ion-text>
+          <h1>Mi cuenta</h1>
+        </ion-text>
+
+        <ion-note>
+          Consulta y administra tu información básica.
+        </ion-note>
+
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+
+      <ion-avatar slot="start">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-avatar>
+
+      <ion-label>
+        <h2>Guaymex</h2>
+        <h3>Jafet Martínez</h3>
+      </ion-label>
+
+      <ion-badge slot="end">
+        Cliente Activo
+      </ion-badge>
+
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Empresa</h2>
+        <ion-note>
+          Guaymex S.A. de C.V.
+        </ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Nombre de contacto</h2>
+        <ion-note>
+          Jafet Martínez
+        </ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Correo electrónico</h2>
+        <ion-note>
+          jafetmaher@gmail.com
+        </ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Teléfono</h2>
+        <ion-note>
+          288 105 6171
+        </ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Tipo de cliente</h2>
+        <ion-note>
+          Activo
+        </ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Servicio contratado</h2>
+        <ion-note>
+          Gestión de redes sociales
+        </ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Usuario</h2>
+        <ion-note>
+          jmartinez
+        </ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-button
+      expand="block"
+      fill="outline">
+
+      Cambiar contraseña
+
+    </ion-button>
+
+
+    <ion-button
+      expand="block">
+
+      Editar datos
+
+    </ion-button>
+
+  </ion-list>
+
 </ion-content>

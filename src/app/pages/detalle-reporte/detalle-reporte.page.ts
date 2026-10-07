@@ -1,19 +1,48 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonText,
+  IonNote,
+  IonBadge,
+  IonCard,
+  IonCardContent,
+  IonButton
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-detalle-reporte',
   templateUrl: './detalle-reporte.page.html',
   styleUrls: ['./detalle-reporte.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  standalone: true,
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonText,
+    IonNote,
+    IonBadge,
+    IonCard,
+    IonCardContent,
+    IonButton
+  ]
 })
-export class DetalleReportePage implements OnInit {
+export class DetalleReportePage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }

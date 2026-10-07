@@ -1,19 +1,60 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonText,
+  IonNote,
+  IonSearchbar,
+  IonSelect,
+  IonSelectOption,
+  IonSegment,
+  IonSegmentButton,
+  IonCard,
+  IonCardContent,
+  IonBadge,
+  IonButton
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-reportes',
   templateUrl: './reportes.page.html',
   styleUrls: ['./reportes.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  standalone: true,
+  imports: [
+    RouterLink,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonContent,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonText,
+    IonNote,
+    IonSearchbar,
+    IonSelect,
+    IonSelectOption,
+    IonSegment,
+    IonSegmentButton,
+    IonCard,
+    IonCardContent,
+    IonBadge,
+    IonButton
+  ]
 })
-export class ReportesPage implements OnInit {
+export class ReportesPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }

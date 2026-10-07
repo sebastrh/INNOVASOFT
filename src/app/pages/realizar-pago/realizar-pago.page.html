@@ -1,13 +1,167 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>realizar-pago</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pagos"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Realizar pago</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">realizar-pago</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+
+    <ion-item lines="none">
+      <ion-label>
+
+        <ion-text>
+          <h1>Realizar pago</h1>
+        </ion-text>
+
+        <ion-note>
+          Completa el pago de tu factura de forma segura.
+        </ion-note>
+
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Factura</h2>
+        <ion-note>FAC-2026-001</ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Periodo</h2>
+        <ion-note>Abril 2026</ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Servicio</h2>
+        <ion-note>Gestión de redes sociales</ion-note>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        <h2>Total a pagar</h2>
+        <ion-text>
+          $12,500.00
+        </ion-text>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item lines="none">
+      <ion-label>
+        <h2>Método de pago</h2>
+      </ion-label>
+    </ion-item>
+
+
+    <ion-segment value="tarjeta">
+
+      <ion-segment-button value="tarjeta">
+        <ion-label>Tarjeta</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="transferencia">
+        <ion-label>Transferencia</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+
+
+    <ion-item>
+      <ion-input
+        label="Nombre del titular"
+        labelPlacement="stacked"
+        placeholder="Como aparece en la tarjeta">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input
+        label="Número de tarjeta"
+        labelPlacement="stacked"
+        type="text"
+        placeholder="1234 5678 9012 3456">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input
+        label="Vencimiento"
+        labelPlacement="stacked"
+        placeholder="MM/AA">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input
+        label="CVV"
+        labelPlacement="stacked"
+        type="password"
+        placeholder="123">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input
+        label="Correo para comprobante"
+        labelPlacement="stacked"
+        type="email"
+        placeholder="tu@correo.com">
+      </ion-input>
+    </ion-item>
+
+
+    <ion-item lines="none">
+
+      <ion-icon
+        name="lock-closed-outline"
+        slot="start">
+      </ion-icon>
+
+      <ion-note>
+        Tu pago será procesado de forma segura.
+      </ion-note>
+
+    </ion-item>
+
+
+    <ion-button
+      expand="block"
+      fill="outline"
+      routerLink="/pagos">
+
+      Cancelar
+
+    </ion-button>
+
+
+    <ion-button expand="block">
+
+      Confirmar pago
+
+    </ion-button>
+
+  </ion-list>
+
 </ion-content>

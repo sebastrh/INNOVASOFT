@@ -1,19 +1,53 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { Component } from '@angular/core';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonButtons,
+  IonBackButton,
+  IonTitle,
+  IonButton,
+  IonIcon,
+  IonNote,
+  IonContent,
+  IonItem,
+  IonSelect,
+  IonSelectOption,
+  IonCard,
+  IonCardContent,
+  IonBadge,
+  IonLabel
+} from '@ionic/angular';
 
 @Component({
   selector: 'app-calendario',
   templateUrl: './calendario.page.html',
   styleUrls: ['./calendario.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  standalone: true,
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonBackButton,
+    IonTitle,
+    IonButton,
+    IonIcon,
+    IonContent,
+    IonItem,
+    IonSelect,
+    IonSelectOption,
+    IonCard,
+    IonCardContent,
+    IonBadge,
+    IonItem,
+    IonSelect,
+    IonSelectOption,
+    IonNote,
+    IonLabel
+  ]
 })
-export class CalendarioPage implements OnInit {
+export class CalendarioPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }
