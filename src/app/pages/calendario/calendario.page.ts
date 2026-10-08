@@ -16,7 +16,9 @@ import {
   IonCard,
   IonCardContent,
   IonBadge,
-  IonLabel
+  IonLabel,
+  IonText,
+  IonList
 } from '@ionic/angular';
 
 @Component({
@@ -30,6 +32,7 @@ import {
     IonButtons,
     IonBackButton,
     IonTitle,
+    IonList,
     IonButton,
     IonIcon,
     IonContent,
@@ -43,7 +46,8 @@ import {
     IonSelect,
     IonSelectOption,
     IonNote,
-    IonLabel
+    IonLabel,
+    IonText
   ]
 })
 export class CalendarioPage {
