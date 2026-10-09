@@ -1,110 +1,73 @@
 <ion-header>
   <ion-toolbar>
-
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/inicio"></ion-back-button>
     </ion-buttons>
 
     <ion-title>Soporte</ion-title>
-
   </ion-toolbar>
 </ion-header>
-
 
 <ion-content class="ion-padding">
 
   <ion-list>
 
-    <ion-item lines="none">
-      <ion-label>
-
-        <ion-text>
-          <h1>Soporte</h1>
-        </ion-text>
-
-        <ion-note>
-          Envíanos tu aclaración o solicitud.
-        </ion-note>
-
-      </ion-label>
-    </ion-item>
-
-
     <ion-item>
       <ion-input
         label="Asunto"
         labelPlacement="stacked"
-        placeholder="Escribe el asunto de tu solicitud">
+        placeholder="Escribe el asunto">
       </ion-input>
     </ion-item>
-
 
     <ion-item>
       <ion-textarea
         label="Mensaje"
         labelPlacement="stacked"
-        placeholder="Describe tu solicitud o aclaración..."
+        placeholder="Escribe tu mensaje"
         maxlength="500"
-        counter="true">
+        counter="true"
+        autoGrow="true">
       </ion-textarea>
     </ion-item>
 
-
-    <ion-item lines="none">
-
-      <ion-icon
-        name="mail-outline"
-        slot="start">
-      </ion-icon>
-
-      <ion-label>
-        <h2>Correo de soporte</h2>
-        <ion-note>
-          soporte@marketingmanager.com
-        </ion-note>
-      </ion-label>
-
-    </ion-item>
-
-
-    <ion-item lines="none">
-
-      <ion-icon
-        name="call-outline"
-        slot="start">
-      </ion-icon>
-
-      <ion-label>
-        <h2>Teléfono</h2>
-        <ion-note>
-          288 105 6171
-        </ion-note>
-      </ion-label>
-
-    </ion-item>
-
-
-    <ion-item lines="none">
-
-      <ion-icon
-        name="time-outline"
-        slot="start">
-      </ion-icon>
-
-      <ion-label>
-        <h2>Horario</h2>
-        <ion-note>
-          Lun a Vie · 9:00 a 18:00
-        </ion-note>
-      </ion-label>
-
-    </ion-item>
-
-
-    <ion-button expand="block">
-      Enviar solicitud
-    </ion-button>
-
   </ion-list>
+
+  <ion-card>
+    <ion-card-content>
+
+      <ion-item lines="none">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+
+        <ion-label>
+          <h2>Correo</h2>
+          <p>soporte@marketingmanager.com</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-icon name="call-outline" slot="start"></ion-icon>
+
+        <ion-label>
+          <h2>Teléfono</h2>
+          <p>81 1234 5678</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-icon name="time-outline" slot="start"></ion-icon>
+
+        <ion-label>
+          <h2>Horario</h2>
+          <p>Lunes a viernes de 9:00 a 18:00</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block">
+    Enviar solicitud
+  </ion-button>
 
 </ion-content>

@@ -9,12 +9,12 @@ import {
   IonContent,
   IonList,
   IonItem,
-  IonLabel,
-  IonText,
-  IonNote,
   IonInput,
   IonTextarea,
+  IonCard,
+  IonCardContent,
   IonIcon,
+  IonLabel,
   IonButton
 } from '@ionic/angular';
 
@@ -32,12 +32,12 @@ import {
     IonContent,
     IonList,
     IonItem,
-    IonLabel,
-    IonText,
-    IonNote,
     IonInput,
     IonTextarea,
+    IonCard,
+    IonCardContent,
     IonIcon,
+    IonLabel,
     IonButton
   ]
 })
