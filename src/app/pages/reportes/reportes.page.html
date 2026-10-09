@@ -10,200 +10,125 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content class="ion-padding">
 
-  <ion-list>
+  <ion-searchbar
+    placeholder="Buscar reporte">
+  </ion-searchbar>
 
-    <ion-item lines="none">
-      <ion-label>
+  <ion-item>
+    <ion-select
+      label="Red social"
+      labelPlacement="stacked"
+      placeholder="Seleccionar">
 
-        <ion-text>
-          <h1>Reportes</h1>
-        </ion-text>
+      <ion-select-option value="todas">
+        Todas
+      </ion-select-option>
 
-        <ion-note>
-          Consulta los resultados de tus publicaciones.
-        </ion-note>
+      <ion-select-option value="facebook">
+        Facebook
+      </ion-select-option>
 
-      </ion-label>
-    </ion-item>
+      <ion-select-option value="instagram">
+        Instagram
+      </ion-select-option>
 
+    </ion-select>
+  </ion-item>
 
-    <ion-searchbar
-      placeholder="Buscar reporte...">
-    </ion-searchbar>
+  <ion-segment value="seguidores">
 
+    <ion-segment-button value="seguidores">
+      <ion-label>Seguidores</ion-label>
+    </ion-segment-button>
 
-    <ion-item>
+    <ion-segment-button value="interaccion">
+      <ion-label>Interacción</ion-label>
+    </ion-segment-button>
 
-      <ion-select
-        label="Red social"
-        labelPlacement="stacked"
-        placeholder="Todas">
+    <ion-segment-button value="reproducciones">
+      <ion-label>Reproducciones</ion-label>
+    </ion-segment-button>
 
-        <ion-select-option value="todas">
-          Todas
-        </ion-select-option>
+  </ion-segment>
 
-        <ion-select-option value="facebook">
-          Facebook
-        </ion-select-option>
+  <ion-card>
 
-        <ion-select-option value="instagram">
-          Instagram
-        </ion-select-option>
+    <ion-card-content>
 
-      </ion-select>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Reporte R-0001</h2>
+          <p>Facebook</p>
+          <p>01/05/2024 - 12/05/2024</p>
+        </ion-label>
 
-    </ion-item>
+        <ion-badge slot="end">
+          Disponible
+        </ion-badge>
+      </ion-item>
 
+      <ion-button
+        expand="block"
+        routerLink="/detalle-reporte">
+        Ver reporte
+      </ion-button>
 
-    <ion-segment value="seguidores">
+    </ion-card-content>
 
-      <ion-segment-button value="seguidores">
-        <ion-label>Seguidores</ion-label>
-      </ion-segment-button>
+  </ion-card>
 
-      <ion-segment-button value="interaccion">
-        <ion-label>Interacción</ion-label>
-      </ion-segment-button>
+  <ion-card>
 
-      <ion-segment-button value="reproducciones">
-        <ion-label>Reproducciones</ion-label>
-      </ion-segment-button>
+    <ion-card-content>
 
-    </ion-segment>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Reporte R-0002</h2>
+          <p>Instagram</p>
+          <p>15/04/2024 - 30/04/2024</p>
+        </ion-label>
 
+        <ion-badge slot="end">
+          Disponible
+        </ion-badge>
+      </ion-item>
 
-    <ion-card>
+      <ion-button
+        expand="block"
+        routerLink="/detalle-reporte">
+        Ver reporte
+      </ion-button>
 
-      <ion-card-content>
+    </ion-card-content>
 
-        <ion-item lines="none">
+  </ion-card>
 
-          <ion-label>
+  <ion-card>
 
-            <h2>R-0001 Seguidores</h2>
+    <ion-card-content>
 
-            <h3>
-              Guaymex y tu bienestar diario
-            </h3>
-
-            <ion-note>
-              Facebook · 12/05/2024
-            </ion-note>
-
-          </ion-label>
-
-          <ion-badge slot="end">
-            Disponible
-          </ion-badge>
-
-        </ion-item>
-
-
-        <ion-button
-          expand="block"
-          routerLink="/detalle-reporte">
-
-          Ver reporte
-
-        </ion-button>
-
-      </ion-card-content>
-
-    </ion-card>
-
-
-    <ion-card>
-
-      <ion-card-content>
-
-        <ion-item lines="none">
-
-          <ion-label>
-
-            <h2>R-0002 Interacción</h2>
-
-            <h3>
-              Ensaladas frescas para tu rutina
-            </h3>
-
-            <ion-note>
-              Instagram · 10/05/2024
-            </ion-note>
-
-          </ion-label>
-
-          <ion-badge slot="end">
-            Disponible
-          </ion-badge>
-
-        </ion-item>
-
-
-        <ion-button
-          expand="block"
-          routerLink="/detalle-reporte">
-
-          Ver reporte
-
-        </ion-button>
-
-      </ion-card-content>
-
-    </ion-card>
-
-
-    <ion-card>
-
-      <ion-card-content>
-
-        <ion-item lines="none">
-
-          <ion-label>
-
-            <h2>R-0003 Reproducciones</h2>
-
-            <h3>
-              Smoothies Guaymex en 30 segundos
-            </h3>
-
-            <ion-note>
-              Facebook · 08/05/2024
-            </ion-note>
-
-          </ion-label>
-
-          <ion-badge slot="end">
-            En revisión
-          </ion-badge>
-
-        </ion-item>
-
-
-        <ion-button
-          expand="block"
-          routerLink="/detalle-reporte">
-
-          Ver reporte
-
-        </ion-button>
-
-      </ion-card-content>
-
-    </ion-card>
-
-
-    <ion-item lines="none">
-
-      <ion-label>
-        Mostrando 1 a 3 de 8
-      </ion-label>
-
-    </ion-item>
-
-  </ion-list>
+      <ion-item lines="none">
+        <ion-label>
+          <h2>Reporte R-0003</h2>
+          <p>Facebook</p>
+          <p>01/04/2024 - 15/04/2024</p>
+        </ion-label>
+
+        <ion-badge slot="end">
+          Disponible
+        </ion-badge>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        routerLink="/detalle-reporte">
+        Ver reporte
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
 
 </ion-content>
