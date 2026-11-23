@@ -1,0 +1,35 @@
+<ion-content class="ion-padding">
+
+  <h1>Publicaciones</h1>
+
+  @for (publicacion of listaPublicaciones; track publicacion.id) {
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <h2>
+          {{ publicacion.titulo }}
+        </h2>
+
+        <p>
+          Red social:
+          {{ publicacion.redSocial }}
+        </p>
+
+        <p>
+          Fecha:
+          {{ publicacion.fecha }}
+        </p>
+
+        <ion-badge>
+          {{ publicacion.estado }}
+        </ion-badge>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  }
+
+</ion-content>
