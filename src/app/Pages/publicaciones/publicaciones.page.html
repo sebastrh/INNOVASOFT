@@ -12,7 +12,6 @@
   <p>Consulta tus publicaciones por fecha.</p>
 </ion-text>
 
-
   <ion-button
   expand="block"
   (click)="irPagina('/crear-publicacion')">
@@ -25,7 +24,6 @@
 
   @for (publicacion of publicaciones(); track publicacion.id) {
 
-    
 
     <ion-item button [routerLink]="['/detalle-publicacion',publicacion.id]">
       <ion-text class="plataforma" slot="start">
