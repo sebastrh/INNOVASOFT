@@ -1,0 +1,39 @@
+
+/* ANCHO DEL MENÚ */
+ion-menu {
+  --width: 270px;
+}
+
+/* ENCABEZADO DEL MENÚ */
+ion-menu ion-toolbar {
+  --background: #E3E7EA;
+}
+
+/* CONTENEDOR DEL LOGO */
+ion-menu .logo-item {
+  --background: transparent;
+  --padding-start: 15px;
+  --inner-padding-end: 0;
+}
+
+/* TAMAÑO DEL LOGO */
+ion-menu .logo-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+/* NOMBRE DE LA APLICACIÓN */
+ion-menu .logo-item ion-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2B324E;
+  white-space: nowrap;
+}
+
+/* OPCIONES DEL MENÚ */
+ion-menu ion-item {
+  --color: #2B324E;
+  font-size: 15px;
+}

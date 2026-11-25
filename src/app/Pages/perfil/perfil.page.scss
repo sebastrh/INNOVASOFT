@@ -1,0 +1,154 @@
+
+/* CONTENIDO PRINCIPAL */
+ion-content {
+  --background: #F7F9FC;
+  --color: #2B324E;
+}
+
+/* BOTÓN REGRESAR */
+.btn-regresar {
+  --color: #5B82BB;
+  --background: transparent;
+  --box-shadow: none;
+
+  text-transform: none;
+  font-size: 12px;
+  font-weight: 500;
+
+  height: 30px;
+  margin: 0 0 5px -8px;
+}
+
+.btn-regresar ion-icon {
+  font-size: 17px;
+  margin-right: 4px;
+}
+
+/* TÍTULO */
+.titulo h1 {
+  color: #2B324E;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+/* DESCRIPCIÓN */
+.descripcion p {
+  color: #7A879D;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+/* TARJETA PRINCIPAL DEL PERFIL */
+.perfil-card {
+  --background: #FFFFFF;
+  color: #2B324E;
+
+  border: 1px solid #5B82BB;
+  border-radius: 15px;
+  box-shadow: none;
+
+  margin: 0 0 12px;
+}
+
+.perfil-card ion-card-content {
+  padding: 15px;
+}
+
+.perfil-info {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+/* ÍCONO PRINCIPAL */
+.perfil-icono {
+  color: #5B82BB;
+  font-size: 46px;
+  margin-right: 10px;
+}
+
+/* NOMBRE DEL CLIENTE */
+.perfil-info ion-label h2 {
+  color: #2B324E;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* DESCRIPCIÓN DEL CLIENTE */
+.perfil-info ion-label p {
+  color: #7A879D;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* ETIQUETAS DEL PERFIL */
+.perfil-info ion-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-right: 6px;
+}
+
+/* BADGE CLIENTE */
+.badge-cliente {
+  background: #EEF3FC;
+  color: #313E65;
+  border: 1px solid #9CB8E5;
+}
+
+/* BADGE ACTIVO */
+.badge-activo {
+  background: #DDF5E6;
+  color: #198754;
+}
+
+/* TARJETAS DE INFORMACIÓN */
+.dato-item {
+  --background: #FFFFFF;
+  --color: #2B324E;
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+  --border-radius: 12px;
+  --min-height: 60px;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 12px;
+
+  margin-bottom: 9px;
+}
+
+/* ÍCONOS DE LOS DATOS */
+.dato-item ion-icon {
+  color: #5B82BB;
+  background: #EEF3FC;
+
+  border: 1px solid #D9E6F9;
+  border-radius: 50%;
+
+  font-size: 20px;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+/* ETIQUETAS */
+.dato-item ion-label p {
+  color: #7A879D;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+/* VALORES */
+.dato-item ion-label h3 {
+  color: #2B324E;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* EVITAR QUE EL TEXTO SE CORTE */
+.dato-item ion-label {
+  white-space: normal;
+}

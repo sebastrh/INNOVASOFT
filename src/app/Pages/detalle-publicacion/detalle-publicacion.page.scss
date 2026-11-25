@@ -1,0 +1,174 @@
+
+/* Fondo general */
+ion-content {
+  --background: #FFFFFF;
+  --color: #2B324E;
+}
+
+/* Botón de regresar */
+.btn-regresar {
+  --color: #2B324E;
+  --background: #E3E7EA;
+  --border-radius: 12px;
+
+  width: 42px;
+  height: 42px;
+  margin: 5px 0 15px;
+}
+
+.btn-regresar ion-icon {
+  font-size: 23px;
+}
+
+/* Título principal */
+h1 {
+  color: #2B324E;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 5px 0 8px;
+}
+
+/* Texto debajo del título */
+h1 + p {
+  color: #6B7280;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+/* Títulos de secciones */
+h2 {
+  color: #313E65;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 22px 0 12px;
+}
+
+/* Tarjetas */
+ion-card {
+  --background: #FFFFFF;
+  color: #2B324E;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 14px;
+
+  box-shadow: 0 3px 12px rgba(43, 50, 78, 0.06);
+
+  margin: 0 0 18px;
+}
+
+ion-card-content {
+  padding: 18px;
+}
+
+/* Información de la publicación */
+ion-card ion-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+ion-card ion-label {
+  margin: 0;
+  white-space: normal;
+}
+
+ion-card ion-label h2 {
+  color: #2B324E;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+ion-card ion-label p {
+  color: #5F6980;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 5px 0;
+}
+
+/* Estado de la publicación */
+ion-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+/* Descripción */
+ion-card-content > p {
+  color: #5F6980;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Botones generales */
+ion-button {
+  --border-radius: 10px;
+  --box-shadow: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: none;
+}
+
+/* Botón editar y guardar */
+ion-button[expand="block"]:not([fill="outline"]) {
+  --background: #313E65;
+  --background-hover: #2B324E;
+  --color: #FFFFFF;
+
+  min-height: 46px;
+  margin-top: 18px;
+}
+
+/* Botón cancelar */
+ion-button[fill="outline"] {
+  --border-color: #5B82BB;
+  --color: #313E65;
+
+  min-height: 46px;
+  margin-top: 10px;
+}
+
+/* Formulario */
+form {
+  background: #FFFFFF;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 14px;
+
+  padding: 16px;
+  margin-bottom: 25px;
+}
+
+/* Campos del formulario */
+form ion-item {
+  --background: #F5F7FA;
+  --color: #2B324E;
+  --border-color: transparent;
+  --border-radius: 10px;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 10px;
+
+  margin-bottom: 13px;
+}
+
+/* Entradas y selectores */
+ion-input,
+ion-textarea,
+ion-select {
+  --color: #2B324E;
+  --placeholder-color: #8992A3;
+  --highlight-color-focused: #5B82BB;
+
+  font-size: 14px;
+}
+
+/* Espacio inferior */
+form ion-button:last-child {
+  margin-bottom: 5px;
+}

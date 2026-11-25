@@ -1,0 +1,126 @@
+
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Título -->
+  <ion-text color="primary">
+    <h2>Nueva publicación</h2>
+  </ion-text>
+
+  <ion-text color="medium">
+    <p>Completa los datos de la publicación.</p>
+  </ion-text>
+
+  <!-- Formulario -->
+  <form
+    [formGroup]="formulario"
+    (ngSubmit)="crearPublicacion()">
+
+    <!-- Título -->
+    <ion-item>
+      <ion-input
+        label="Título"
+        labelPlacement="stacked"
+        placeholder="Nombre de la publicación"
+        formControlName="titulo">
+      </ion-input>
+    </ion-item>
+
+    <!-- Descripción -->
+    <ion-item>
+      <ion-textarea
+        label="Descripción"
+        labelPlacement="stacked"
+        placeholder="Escribe la descripción"
+        formControlName="descripcion"
+        rows="3">
+      </ion-textarea>
+    </ion-item>
+
+    <!-- Cliente -->
+    <ion-item>
+      <ion-input
+        label="Cliente"
+        labelPlacement="stacked"
+        placeholder="Nombre del cliente"
+        formControlName="cliente">
+      </ion-input>
+    </ion-item>
+
+    <!-- Plataforma -->
+    <ion-item>
+      <ion-select
+        label="Plataforma"
+        labelPlacement="stacked"
+        formControlName="plataforma">
+
+        <ion-select-option value="Instagram">
+          Instagram
+        </ion-select-option>
+
+        <ion-select-option value="Facebook">
+          Facebook
+        </ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <!-- Fecha -->
+    <ion-item>
+      <ion-input
+        label="Fecha"
+        labelPlacement="stacked"
+        type="date"
+        formControlName="fecha">
+      </ion-input>
+    </ion-item>
+
+    <!-- Hora -->
+    <ion-item>
+      <ion-input
+        label="Hora"
+        labelPlacement="stacked"
+        type="time"
+        formControlName="hora">
+      </ion-input>
+    </ion-item>
+
+    <!-- Estado -->
+    <ion-item>
+      <ion-select
+        label="Estado"
+        labelPlacement="stacked"
+        formControlName="estado">
+
+        <ion-select-option value="Programada">
+          Programada
+        </ion-select-option>
+
+        <ion-select-option value="Publicada">
+          Publicada
+        </ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <!-- Guardar -->
+    <ion-button
+      expand="block"
+      type="submit"
+      [disabled]="formulario.invalid || guardando">
+      Guardar publicación
+    </ion-button>
+
+    <!-- Cancelar -->
+    <ion-button
+      expand="block"
+      fill="outline"
+      type="button"
+      (click)="cancelar()">
+      Cancelar
+    </ion-button>
+
+  </form>
+
+</ion-content>

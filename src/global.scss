@@ -34,4 +34,17 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+
+/* BOTÓN CERRAR SESIÓN */
+// ion-popover ion-item.cerrar-sesion {
+//   --color: #E53935;
+// }
+
+// ion-popover ion-item.cerrar-sesion ion-icon {
+//   color: #E53935;
+:root {
+  /* Cambia el fondo global de todas las páginas de Ionic */
+  --ion-background-color: #FFFFFF; 
+}

@@ -1,0 +1,94 @@
+
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text class="titulo">
+    <h1>Servicios</h1>
+  </ion-text>
+
+  <ion-text class="descripcion">
+    <p>Conoce nuestros paquetes y elige el ideal para tu negocio.</p>
+  </ion-text>
+
+  @for (paquete of paquetes; track paquete.id) {
+
+    <ion-card class="paquete-card">
+
+      <ion-card-header>
+
+        <ion-badge color="primary">
+          Plan mensual
+        </ion-badge>
+
+        <ion-card-title>
+          Paquete {{ paquete.nombre }}
+        </ion-card-title>
+
+      </ion-card-header>
+
+      <ion-card-content>
+
+        <ion-text class="descripcion-paquete">
+          <p>{{ paquete.descripcion }}</p>
+        </ion-text>
+
+        <ion-text class="precio">
+          <h2>
+            {{ paquete.precio.toLocaleString('es-MX', {
+              style: 'currency',
+              currency: 'MXN'
+            }) }}
+          </h2>
+        </ion-text>
+
+        <ion-text class="duracion">
+          <p>MXN / mes · Renovación manual</p>
+        </ion-text>
+
+        <ion-text class="incluye">
+          <h3>Incluye:</h3>
+        </ion-text>
+
+        <ion-text class="beneficio">
+          <p>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            {{ paquete.piezas }} piezas de contenido
+          </p>
+
+          <p>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            Publicaciones para Facebook e Instagram
+          </p>
+
+          <p>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            Estrategia de contenido
+          </p>
+
+          <p>
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            Gestión de Meta Ads
+          </p>
+        </ion-text>
+
+        <ion-button
+          expand="block"
+          (click)="agregarCarrito(paquete)">
+
+          <ion-icon
+            name="cart-outline"
+            slot="start">
+          </ion-icon>
+
+          Agregar al carrito
+
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  }
+
+</ion-content>

@@ -1,0 +1,268 @@
+
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Título -->
+  <ion-text class="titulo">
+    <h1>Reportes</h1>
+  </ion-text>
+
+  <ion-text class="descripcion">
+    <p>Consulta los resultados de tus publicaciones.</p>
+  </ion-text>
+
+  <!-- Buscador visual -->
+  <ion-item lines="none" class="buscador">
+    <ion-icon
+      name="search-outline"
+      slot="start">
+    </ion-icon>
+
+    <ion-input
+      placeholder="Buscar reporte..."
+      readonly="true">
+    </ion-input>
+  </ion-item>
+
+  <!-- Filtro de red social -->
+  <ion-item lines="none" class="filtro">
+    <ion-icon
+      name="stats-chart-outline"
+      slot="start">
+    </ion-icon>
+
+    <ion-label>Red social</ion-label>
+
+    <ion-text slot="end">
+      Todas
+    </ion-text>
+
+    <ion-icon
+      name="chevron-down-outline"
+      slot="end">
+    </ion-icon>
+  </ion-item>
+
+  <!-- Categorías -->
+  <ion-grid class="categorias">
+    <ion-row>
+
+      <ion-col size="4">
+        <ion-button expand="block" class="categoria activa">
+          <ion-icon name="people" slot="start"></ion-icon>
+          Seguidores
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-button expand="block" class="categoria">
+          <ion-icon name="stats-chart" slot="start"></ion-icon>
+          Interacción
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="4">
+        <ion-button expand="block" class="categoria">
+          <ion-icon name="play" slot="start"></ion-icon>
+          Reproducciones
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- Reporte 1 -->
+  <ion-card class="reporte-card">
+    <ion-card-content>
+
+      <ion-grid>
+        <ion-row class="fila-superior">
+          <ion-col size="auto">
+            <ion-badge class="codigo">R-0001</ion-badge>
+            <ion-badge class="tipo">Seguidores</ion-badge>
+          </ion-col>
+
+          <ion-col class="ion-text-end">
+            <ion-badge class="disponible">Disponible</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-text class="nombre-reporte">
+        <h3>Guaymex y tu bienestar diario</h3>
+      </ion-text>
+
+      <ion-grid class="datos-reporte">
+        <ion-row class="ion-align-items-center">
+
+          <ion-col size="auto">
+            <ion-icon
+              src="../../../assets/icons/facebook-svgrepo-com.svg"
+              class="icono-red">
+            </ion-icon>
+          </ion-col>
+
+          <ion-col>
+            <ion-text>
+              <p>Facebook</p>
+            </ion-text>
+            <ion-text>
+              <p>12/05/2024</p>
+            </ion-text>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-button class="ver-reporte">
+              Ver reporte
+              <ion-icon
+                name="arrow-forward-outline"
+                slot="end">
+              </ion-icon>
+            </ion-button>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Reporte 2 -->
+  <ion-card class="reporte-card">
+    <ion-card-content>
+
+      <ion-grid>
+        <ion-row class="fila-superior">
+          <ion-col size="auto">
+            <ion-badge class="codigo">R-0002</ion-badge>
+            <ion-badge class="tipo">Interacción</ion-badge>
+          </ion-col>
+
+          <ion-col class="ion-text-end">
+            <ion-badge class="disponible">Disponible</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-text class="nombre-reporte">
+        <h3>Ensaladas frescas para tu rutina</h3>
+      </ion-text>
+
+      <ion-grid class="datos-reporte">
+        <ion-row class="ion-align-items-center">
+
+          <ion-col size="auto">
+            <ion-icon
+              src="../../../assets/icons/instagram-2016-logo-svgrepo-com.svg"
+              class="icono-red">
+            </ion-icon>
+          </ion-col>
+
+          <ion-col>
+            <ion-text>
+              <p>Instagram</p>
+            </ion-text>
+            <ion-text>
+              <p>10/05/2024</p>
+            </ion-text>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-button class="ver-reporte">
+              Ver reporte
+              <ion-icon
+                name="arrow-forward-outline"
+                slot="end">
+              </ion-icon>
+            </ion-button>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Reporte 3 -->
+  <ion-card class="reporte-card">
+    <ion-card-content>
+
+      <ion-grid>
+        <ion-row class="fila-superior">
+          <ion-col size="auto">
+            <ion-badge class="codigo">R-0003</ion-badge>
+            <ion-badge class="tipo">Reproducciones</ion-badge>
+          </ion-col>
+
+          <ion-col class="ion-text-end">
+            <ion-badge class="revision">En revisión</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-text class="nombre-reporte">
+        <h3>Smoothies Guaymex en 30 segundos</h3>
+      </ion-text>
+
+      <ion-grid class="datos-reporte">
+        <ion-row class="ion-align-items-center">
+
+          <ion-col size="auto">
+            <ion-icon
+              src="../../../assets/icons/facebook-svgrepo-com.svg"
+              class="icono-red">
+            </ion-icon>
+          </ion-col>
+
+          <ion-col>
+            <ion-text>
+              <p>Facebook</p>
+            </ion-text>
+            <ion-text>
+              <p>08/05/2024</p>
+            </ion-text>
+          </ion-col>
+
+          <ion-col size="auto">
+            <ion-button class="ver-reporte">
+              Ver reporte
+              <ion-icon
+                name="arrow-forward-outline"
+                slot="end">
+              </ion-icon>
+            </ion-button>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Paginación visual -->
+  <ion-grid class="paginacion">
+    <ion-row class="ion-justify-content-end ion-align-items-center">
+
+      <ion-col size="auto">
+        <ion-button fill="outline" class="pagina">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="auto">
+        <ion-button class="pagina pagina-activa">
+          1
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="auto">
+        <ion-button fill="outline" class="pagina">
+          2
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

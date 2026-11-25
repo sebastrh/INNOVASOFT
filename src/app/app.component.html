@@ -1,3 +1,62 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  
+    <ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+
+         <ion-item lines="none" class="logo-item">
+        
+                        <img src="../../../assets/icons/Logo_Marketing_Manager.svg" alt="Logo" class="logo-img">
+
+                        
+                       <ion-label>Marketing Manager</ion-label>
+      </ion-item>
+     
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <!-- Contenido del menú  -->
+     <ion-list>
+        <ion-menu-toggle>
+         <ion-item button (click)="irPagina('/inicio')" >
+            <ion-label>Inicio</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+  
+        <ion-menu-toggle>
+        <ion-item button  (click)="irPagina('/servicios')" >
+            <ion-label>Servicios</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+        <ion-item button (click)="irPagina('/publicaciones')" >
+            <ion-label>Publicaciones</ion-label >
+        </ion-item>
+        </ion-menu-toggle>
+
+
+        <ion-menu-toggle>
+        <ion-item button (click)="irPagina('/reportes')" >
+            <ion-label>Reportes</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+        <ion-item button (click)="irPagina('/pagos')">
+            <ion-label>Pagos</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+        <ion-item button (click)="irPagina('/soporte')" >
+            <ion-label>Soporte</ion-label>
+        </ion-item>
+        </ion-menu-toggle>
+
+     </ion-list>
+  </ion-content>
+</ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

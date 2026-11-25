@@ -1,0 +1,95 @@
+
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+  <!-- Título -->
+  <ion-text class="titulo">
+    <h1>Soporte</h1>
+  </ion-text>
+
+  <ion-text class="descripcion">
+    <p>Envíanos tu aclaración o solicitud.</p>
+  </ion-text>
+
+  <!-- Asunto -->
+  <ion-text class="etiqueta">
+    <h3>Asunto</h3>
+  </ion-text>
+
+  <ion-item lines="none" class="campo">
+    <ion-input
+      placeholder="Escribe el asunto de tu solicitud"
+      readonly="true">
+    </ion-input>
+  </ion-item>
+
+  <!-- Mensaje -->
+  <ion-text class="etiqueta">
+    <h3>Mensaje</h3>
+  </ion-text>
+
+  <ion-item lines="none" class="campo campo-mensaje">
+    <ion-textarea
+      placeholder="Describe tu solicitud o aclaración..."
+      rows="7"
+      maxlength="500"
+      readonly="true">
+    </ion-textarea>
+
+    <ion-note slot="end" class="contador">
+      0/500
+    </ion-note>
+  </ion-item>
+
+  <!-- Datos de contacto -->
+  <ion-card class="contacto-card">
+    <ion-card-content>
+
+      <ion-item lines="none" class="contacto-item">
+        <ion-icon
+          name="mail-outline"
+          slot="start">
+        </ion-icon>
+
+        <ion-label>
+          <p>Correo de soporte</p>
+          <h3>soporte@marketingmanager.com</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item lines="none" class="contacto-item">
+        <ion-icon
+          name="call-outline"
+          slot="start">
+        </ion-icon>
+
+        <ion-label>
+          <p>Teléfono</p>
+          <h3>Por confirmar</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item lines="none" class="contacto-item">
+        <ion-icon
+          name="time-outline"
+          slot="start">
+        </ion-icon>
+
+        <ion-label>
+          <p>Horario</p>
+          <h3>Lun a Vie · 9:00 a 18:00</h3>
+        </ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón visual -->
+  <ion-button
+    expand="block"
+    class="btn-enviar"
+    disabled="true">
+    Enviar solicitud
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,73 @@
+
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+
+<ion-text color="primary">
+  <h1>Calendario / Publicaciones</h1>
+</ion-text>
+
+<ion-text color="medium">
+  <p>Consulta tus publicaciones por fecha.</p>
+</ion-text>
+
+
+  <ion-button
+  expand="block"
+  (click)="irPagina('/crear-publicacion')">
+  <ion-icon
+    slot="start"
+    name="add-outline">
+  </ion-icon>
+  Nueva publicación
+</ion-button>
+
+  @for (publicacion of publicaciones(); track publicacion.id) {
+
+    
+
+    <ion-item button [routerLink]="['/detalle-publicacion',publicacion.id]">
+      <ion-text class="plataforma" slot="start">
+  @if (publicacion.plataforma === 'Facebook') {
+    <ion-icon
+    
+      src="../../../assets/icons/facebook-svgrepo-com.svg">
+    </ion-icon>
+  }
+
+  @if (publicacion.plataforma === 'Instagram') {
+    <ion-icon
+    
+      src="../../../assets/icons/instagram-2016-logo-svgrepo-com.svg">
+    </ion-icon>
+  }
+
+ 
+</ion-text>
+
+      <ion-label>
+        <h2>{{ publicacion.titulo }}</h2>
+
+        <p>
+          {{ publicacion.fecha }} - {{ publicacion.hora }}
+        </p>
+
+        
+      </ion-label>
+
+      <ion-badge
+        slot="end"
+        [color]="publicacion.estado === 'Programada' ? 'warning' : 'success'">
+        {{ publicacion.estado }}
+      </ion-badge>
+
+    </ion-item>
+
+  } @empty {
+
+    <p>No hay publicaciones disponibles.</p>
+
+  }
+
+</ion-content>

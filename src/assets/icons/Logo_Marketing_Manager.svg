@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 761.36 690.13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1f2d50;
+      }
+
+      .cls-2 {
+        fill: url(#Degradado_sin_nombre_14-2);
+      }
+
+      .cls-3 {
+        fill: url(#Degradado_sin_nombre_13);
+      }
+
+      .cls-4 {
+        fill: url(#Degradado_sin_nombre_14);
+      }
+
+      .cls-5 {
+        fill: url(#Degradado_sin_nombre_30);
+      }
+
+      .cls-6 {
+        fill: url(#Degradado_sin_nombre_14-3);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_13" data-name="Degradado sin nombre 13" x1="576.8" y1="489.44" x2="582.93" y2="962.29" gradientUnits="userSpaceOnUse">
+      <stop offset=".07" stop-color="#3f81c3"/>
+      <stop offset=".07" stop-color="#3e80c2"/>
+      <stop offset=".23" stop-color="#386eb4"/>
+      <stop offset=".39" stop-color="#3463ac"/>
+      <stop offset=".58" stop-color="#3360aa"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_14" data-name="Degradado sin nombre 14" x1="209.11" y1="256.21" x2="288.77" y2="256.21" gradientUnits="userSpaceOnUse">
+      <stop offset=".07" stop-color="#3f81c3"/>
+      <stop offset=".07" stop-color="#3e80c2"/>
+      <stop offset=".29" stop-color="#386eb4"/>
+      <stop offset=".52" stop-color="#3463ac"/>
+      <stop offset=".78" stop-color="#3360aa"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_14-2" data-name="Degradado sin nombre 14" x1="317.11" y1="202.21" x2="400.6" y2="202.21" xlink:href="#Degradado_sin_nombre_14"/>
+    <linearGradient id="Degradado_sin_nombre_14-3" data-name="Degradado sin nombre 14" x1="427.65" y1="128.3" x2="514.72" y2="128.3" xlink:href="#Degradado_sin_nombre_14"/>
+    <linearGradient id="Degradado_sin_nombre_30" data-name="Degradado sin nombre 30" x1="165.45" y1="173.62" x2="761.36" y2="173.62" gradientUnits="userSpaceOnUse">
+      <stop offset=".11" stop-color="#3360aa"/>
+      <stop offset=".42" stop-color="#3f81c3"/>
+    </linearGradient>
+  </defs>
+  <g id="M_Left">
+    <polygon class="cls-1" points="0 690.13 0 283.4 91.91 283.4 222.13 454.98 294.13 360.77 373.79 349.28 377.47 687.06 304.09 690.13 300.26 482.55 215.63 599.61 95.74 432.77 96.51 690.13 0 690.13"/>
+  </g>
+  <g id="M_Right">
+    <polygon class="cls-3" points="400.6 344.68 472.6 316.34 559.57 439.68 672.51 283.4 752.94 283.4 752.94 690.13 664.09 690.13 662.55 441.96 558.38 588.26 474.89 475.66 474.89 690.13 400.6 690.13 400.6 344.68"/>
+  </g>
+  <g id="Rectangulos">
+    <polygon class="cls-4" points="288.77 303.32 209.11 321.7 209.11 190.72 288.77 190.72 288.77 303.32"/>
+    <polygon class="cls-2" points="400.6 258.89 317.11 293.36 317.11 111.06 400.6 111.06 400.6 258.89"/>
+    <polygon class="cls-6" points="514.72 186.89 427.65 243.57 427.65 13.02 514.72 13.02 514.72 186.89"/>
+  </g>
+  <g id="Flecha">
+    <path class="cls-5" d="M165.45,340.09c34.74-.64,83.14-4.69,138.64-19.91,87.98-24.13,147.18-63.54,180-85.79,80.08-54.29,135.29-116.83,171.57-166.98l-47.49-22.98c51.06-14.81,102.13-29.62,153.19-44.43-11.23,51.32-22.47,102.64-33.7,153.96l-26.81-42.89c-39.36,47.68-100.45,108.8-188.43,158.55-47.38,26.8-120.05,66.89-222.89,75.83-50.97,4.43-93.92-.14-124.09-5.36Z"/>
+  </g>
+</svg>

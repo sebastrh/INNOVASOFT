@@ -1,0 +1,205 @@
+
+
+.login-content {
+  --background: #ffffff;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.login-content::part(background) {
+  background: #ffffff;
+}
+
+
+
+
+.login-grid {
+  position: relative;
+  z-index: 1;
+
+  min-height: 100%;
+  padding: 70px 22px 30px;
+}
+
+/* Logo y nombre */
+.logo-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+
+  margin-bottom: 25px;
+}
+
+.logo-item ion-label {
+  margin: 0;
+}
+
+.logo-item ion-text h2 {
+  width: 48px;
+  height: 48px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e6f1ff;
+
+  border-radius: 12px;
+
+  color: #5b82bb;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.logo-item ion-text h3 {
+  margin: 0;
+
+  color: #2b324e;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.logo-img{
+    width: 70px;
+    height: 70px;
+}
+
+/* Título */
+.titulo-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+
+  margin-bottom: 34px;
+}
+
+.titulo-item ion-label {
+  margin: 0;
+}
+
+.titulo-item h1 {
+  margin: 0;
+
+  color: #2b324e;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.titulo-item p {
+  margin-top: 5px;
+  margin-bottom: 0;
+
+  color: #8d96a8;
+
+  font-size: 13px;
+}
+
+/* Lista */
+ion-list {
+  background: transparent;
+  padding: 0;
+}
+
+/* Etiquetas encima de los inputs */
+.label-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --min-height: auto;
+
+  margin-bottom: 7px;
+}
+
+.label-item ion-label {
+  margin: 0;
+
+  color: #2b324e;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Inputs */
+.input-item {
+  --background: #ffffff;
+
+  --padding-start: 12px;
+  --inner-padding-end: 5px;
+
+  --min-height: 54px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid #d8deea;
+  border-radius: 12px;
+}
+
+.input-item.is-invalid {
+  border: 2px solid red;
+  --border-color: red;
+  --highlight-color-focused: red;
+}
+
+.input-item ion-icon {
+  color: #5b82bb;
+
+  font-size: 20px;
+}
+
+.input-item ion-input {
+  --color: #2b324e;
+
+  --placeholder-color: #9aa3b5;
+  --placeholder-opacity: 1;
+
+  font-size: 13px;
+}
+
+
+
+/* Botón del ojo */
+.input-item ion-button {
+  --color: #313e65;
+  --padding-start: 5px;
+  --padding-end: 5px;
+
+  margin: 0;
+}
+
+.input-item ion-button ion-icon {
+  font-size: 20px;
+}
+
+/* Botón principal */
+.login-button {
+  width: 100%;
+  height: 54px;
+
+  margin-top: 24px;
+
+  --background: #2b324e;
+  --background-hover: #313e65;
+  --background-activated: #313e65;
+
+  --color: #ffffff;
+
+  --border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-transform: none;
+}
+
+.login-button ion-icon {
+  font-size: 22px;
+}
+
+
+
