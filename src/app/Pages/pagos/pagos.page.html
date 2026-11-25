@@ -1,0 +1,119 @@
+
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text class="titulo">
+    <h1>Pagos</h1>
+  </ion-text>
+
+  <ion-text class="descripcion">
+    <p>Revisa los servicios agregados a tu carrito.</p>
+  </ion-text>
+
+  @for (paquete of carritoService.carrito(); track paquete.id) {
+
+    <ion-card class="paquete-card">
+
+      <ion-card-content>
+
+        <ion-text class="nombre-paquete">
+          <h2>Paquete {{ paquete.nombre }}</h2>
+        </ion-text>
+
+        <ion-text class="detalle">
+          <p>{{ paquete.piezas }} piezas de contenido</p>
+          <p>Duración: 1 mes</p>
+        </ion-text>
+
+        <ion-text class="precio">
+          <h3>
+            {{ paquete.precio.toLocaleString('es-MX', {
+              style: 'currency',
+              currency: 'MXN'
+            }) }}
+          </h3>
+        </ion-text>
+
+        <ion-button
+          fill="clear"
+          color="danger"
+          (click)="eliminarPaquete(paquete.id)">
+
+          <ion-icon
+            name="trash-outline"
+            slot="start">
+          </ion-icon>
+
+          Eliminar
+        </ion-button>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  } @empty {
+
+    <ion-text class="carrito-vacio">
+      <p>No tienes servicios agregados al carrito.</p>
+    </ion-text>
+
+  }
+
+  @if (carritoService.cantidad() > 0) {
+
+    <ion-card class="resumen-card">
+
+      <ion-card-content>
+
+        <ion-text>
+          <h2>Resumen de compra</h2>
+        </ion-text>
+
+        <ion-item lines="none">
+          <ion-label>Subtotal</ion-label>
+
+          <ion-text slot="end">
+            {{ carritoService.subtotal() | currency:'MXN':'symbol':'1.2-2' }}
+          </ion-text>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label>IVA (16%)</ion-label>
+
+          <ion-text slot="end">
+            {{ iva | currency:'MXN':'symbol':'1.2-2' }}
+          </ion-text>
+        </ion-item>
+
+        <ion-item lines="none" class="total">
+          <ion-label>Total</ion-label>
+
+          <ion-text slot="end">
+            {{ total | currency:'MXN':'symbol':'1.2-2' }}
+          </ion-text>
+        </ion-item>
+
+      </ion-card-content>
+
+    </ion-card>
+
+   
+<ion-button
+  expand="block"
+  class="btn-pagar"
+  (click)="pagarMercadoPago()">
+
+  <ion-icon
+    name="card-outline"
+    slot="start">
+  </ion-icon>
+
+  Pagar con Mercado Pago
+
+</ion-button>
+
+
+  }
+
+</ion-content>

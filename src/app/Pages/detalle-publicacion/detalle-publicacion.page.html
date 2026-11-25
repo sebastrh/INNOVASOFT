@@ -1,0 +1,197 @@
+
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Botón regresar -->
+  
+<ion-button
+  fill="clear"
+  class="btn-regresar"
+  (click)="regresar()">
+
+  <ion-icon
+    slot="icon-only"
+    name="arrow-back-outline">
+  </ion-icon>
+
+</ion-button>
+
+
+  <h1>Detalle de publicación</h1>
+  <p>Consulta y administra la información de tu publicación.</p>
+
+  @if (publicacion(); as publicacion) {
+
+    <!-- Información de la publicación -->
+    @if (!modoEdicion) {
+
+      <ion-card>
+        <ion-card-content>
+
+          <ion-item lines="none">
+            <ion-label>
+              <h2>{{ publicacion.titulo }}</h2>
+              <p>Cliente: {{ publicacion.cliente }}</p>
+              <p>Plataforma: {{ publicacion.plataforma }}</p>
+              <p>Fecha: {{ publicacion.fecha }}</p>
+              <p>Hora: {{ publicacion.hora }}</p>
+            </ion-label>
+          </ion-item>
+
+          <ion-badge
+            [color]="publicacion.estado === 'Programada'
+              ? 'warning'
+              : 'success'">
+            {{ publicacion.estado }}
+          </ion-badge>
+
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Descripción -->
+      <h2>Descripción / Copy</h2>
+
+      <ion-card>
+        <ion-card-content>
+          <p>{{ publicacion.descripcion }}</p>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Botones -->
+      <ion-button
+        expand="block"
+        (click)="modoEdicion = true">
+        Editar publicación
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        color="danger"
+        (click)="eliminarPublicacion()">
+        Borrar Publicacion
+      </ion-button>
+
+    }
+
+    <!-- Formulario para editar -->
+    @if (modoEdicion) {
+
+      <h2>Editar publicación</h2>
+
+      <form [formGroup]="formulario">
+
+        <!-- Título -->
+        <ion-item>
+          <ion-input
+            label="Título"
+            labelPlacement="stacked"
+            formControlName="titulo">
+          </ion-input>
+        </ion-item>
+
+        <!-- Descripción -->
+        <ion-item>
+          <ion-textarea
+            label="Descripción"
+            labelPlacement="stacked"
+            formControlName="descripcion"
+            rows="3">
+          </ion-textarea>
+        </ion-item>
+
+        <!-- Cliente -->
+        <ion-item>
+          <ion-input
+            label="Cliente"
+            labelPlacement="stacked"
+            formControlName="cliente">
+          </ion-input>
+        </ion-item>
+
+        <!-- Plataforma -->
+        <ion-item>
+          <ion-select
+            label="Plataforma"
+            labelPlacement="stacked"
+            formControlName="plataforma">
+
+            <ion-select-option value="Instagram">
+              Instagram
+            </ion-select-option>
+
+            <ion-select-option value="Facebook">
+              Facebook
+            </ion-select-option>
+
+          </ion-select>
+        </ion-item>
+
+        <!-- Fecha -->
+        <ion-item>
+          <ion-input
+            type="date"
+            label="Fecha"
+            labelPlacement="stacked"
+            formControlName="fecha">
+          </ion-input>
+        </ion-item>
+
+        <!-- Hora -->
+        <ion-item>
+          <ion-input
+            type="time"
+            label="Hora"
+            labelPlacement="stacked"
+            formControlName="hora">
+          </ion-input>
+        </ion-item>
+
+        <!-- Estado -->
+        <ion-item>
+          <ion-select
+            label="Estado"
+            labelPlacement="stacked"
+            formControlName="estado">
+
+            <ion-select-option value="Programada">
+              Programada
+            </ion-select-option>
+
+            <ion-select-option value="Publicada">
+              Publicada
+            </ion-select-option>
+
+          </ion-select>
+        </ion-item>
+
+        <!-- Botones del formulario -->
+        <ion-button
+          expand="block"
+          type="button"
+          [disabled]="formulario.invalid"
+          (click)="guardarCambios()" >
+          Guardar cambios
+        </ion-button>
+
+        <ion-button
+          expand="block"
+          fill="outline"
+          type="button"
+          (click)="modoEdicion = false">
+          Cancelar
+        </ion-button>
+
+      </form>
+
+    }
+
+  } @else {
+
+    <p>Cargando publicación...</p>
+
+  }
+
+
+
+</ion-content>

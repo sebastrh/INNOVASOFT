@@ -1,0 +1,135 @@
+<ion-content [fullscreen]="true" class="login-content">
+
+    <form [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
+
+    <ion-grid class="login-grid">
+        <ion-row class="ion-justify-content-center">
+            <ion-col size="12" size-md="6" size-lg="4">
+                <!-- Va a ser el item del logo -->
+                <ion-item lines="none" class="logo-item">
+                    <ion-label class="ion-text-center">
+                        <img src="../../../assets/icons/Logo_Marketing_Manager.svg" alt="Logo" class="logo-img">
+
+                        <ion-text>
+                            <h3>Marketing Manager</h3>
+                        </ion-text>
+
+                    </ion-label>
+
+                </ion-item>
+
+                <!-- Aqui va a ir el login form -->
+                 <ion-item lines="none" class="titulo-item">
+                    <ion-label class="ion-text-center">
+                        <ion-text>
+                            <h1>Iniciar Sesión</h1>
+                        </ion-text>
+
+                        <ion-text color="medium">
+                            <p>Ingresa tu usuario y contraseña</p>
+
+                        </ion-text>
+
+                    </ion-label>
+
+                 </ion-item>
+
+                 <ion-list>
+                    <ion-item lines="none" class="label-item">
+                        <ion-label>
+                            Usuario
+                        </ion-label>
+
+                    </ion-item>
+
+                    <ion-item lines="none" class="input-item" [class.is-invalid]="invalido('username')">
+                        <ion-icon
+                        name="person-outline"
+                        slot="start">
+                        </ion-icon>
+
+                        <ion-input
+                        type="text"
+                        placeholder="Ingresa tu usuario o correo electrónico"
+                        formControlName="username">
+                        fill="outline"
+                        </ion-input>
+
+                        
+
+                    </ion-item>
+                  
+
+
+                    <ion-item lines="none" class="label-item">
+                        <ion-label>
+                            Contraseña
+                        </ion-label>
+                        
+                    </ion-item>
+
+                    <ion-item lines="none" class="input-item" [class.is-invalid]="invalido('password')">
+                    <ion-icon
+                     name="lock-closed-outline"
+                    slot="start">
+                    </ion-icon>
+
+                    <ion-input
+                    [type]="mostrarContrasena ? 'text' : 'password'"
+                    placeholder="Ingresa tu contraseña"
+                    formControlName="password">
+                    </ion-input>
+
+                    <ion-button
+                    fill="clear"
+                    slot="end"
+                    (click)="mostrarContrasena = !mostrarContrasena">
+
+                        <ion-icon
+                        [name]="mostrarContrasena 
+                        ? 'eye-off-outline' :
+                        'eye-outline'">
+                        </ion-icon>
+
+
+                    </ion-button>
+
+
+                    </ion-item>
+
+                   
+
+                 </ion-list>
+
+                 <ion-button
+                     expand="block"
+                     class="login-button"
+                     /* [disabled]="loginForm.invalid" */
+                     (click)="iniciarSesion()"
+                     >
+
+                    Iniciar sesión
+
+                  <ion-icon
+                  name="arrow-forward-outline"
+                  slot="end">
+                  </ion-icon>
+
+                 </ion-button>
+
+                  @if (invalido('password') || invalido('username')) {
+                            <ion-text color="danger">
+                                <p>Rellene todos los campos correctamente</p>
+
+                            </ion-text>
+                        }
+
+
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    </form>
+
+</ion-content>

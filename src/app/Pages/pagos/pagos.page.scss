@@ -1,0 +1,117 @@
+
+/* CONTENIDO */
+ion-content {
+  --background: #F7F9FC;
+  --color: #2B324E;
+}
+
+/* TÍTULO */
+.titulo h1 {
+  color: #2B324E;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 15px 0 6px;
+}
+
+.descripcion p {
+  color: #7A879D;
+  font-size: 14px;
+  margin: 0 0 22px;
+}
+
+/* TARJETAS */
+.paquete-card,
+.resumen-card {
+  --background: #FFFFFF;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 14px;
+  box-shadow: none;
+
+  margin: 0 0 12px;
+}
+
+.paquete-card ion-card-content,
+.resumen-card ion-card-content {
+  padding: 16px;
+}
+
+/* PAQUETES */
+.nombre-paquete h2 {
+  color: #2B324E;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.detalle p {
+  color: #7A879D;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.precio h3 {
+  color: #313E65;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 15px 0 8px;
+}
+
+/* BOTÓN ELIMINAR */
+.paquete-card ion-button {
+  --box-shadow: none;
+  text-transform: none;
+  font-size: 13px;
+
+  margin-left: -12px;
+}
+
+/* RESUMEN */
+.resumen-card h2 {
+  color: #2B324E;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.resumen-card ion-item {
+  --background: transparent;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  --color: #2B324E;
+
+  font-size: 14px;
+}
+
+.resumen-card ion-text {
+  color: #313E65;
+}
+
+.total {
+  font-weight: 700;
+  border-top: 1px solid #E3E7EA;
+  margin-top: 8px;
+}
+
+/* PAGAR */
+.btn-pagar {
+  --background: #313E65;
+  --color: #FFFFFF;
+  --border-radius: 10px;
+  --box-shadow: none;
+
+  min-height: 48px;
+  margin-top: 20px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+/* CARRITO VACÍO */
+.carrito-vacio p {
+  color: #7A879D;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}

@@ -1,0 +1,116 @@
+
+/* CONTENIDO */
+ion-content {
+  --background: #F7F9FC;
+  --color: #2B324E;
+}
+
+/* TÍTULO */
+.titulo h1 {
+  color: #2B324E;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 15px 0 6px;
+}
+
+/* DESCRIPCIÓN */
+.descripcion p {
+  color: #7A879D;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 22px;
+}
+
+/* TARJETAS */
+.paquete-card {
+  --background: #FFFFFF;
+  color: #2B324E;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 15px;
+  box-shadow: none;
+
+  margin: 0 0 15px;
+}
+
+ion-card-header {
+  padding-bottom: 8px;
+}
+
+ion-card-title {
+  color: #2B324E;
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+/* BADGE */
+ion-badge {
+  align-self: flex-start;
+  --background: #E3E7EA;
+  --color: #313E65;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+/* DESCRIPCIÓN DEL PAQUETE */
+.descripcion-paquete p {
+  color: #7A879D;
+  font-size: 13px;
+  margin: 0 0 15px;
+}
+
+/* PRECIO */
+.precio h2 {
+  color: #313E65;
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.duracion p {
+  color: #7A879D;
+  font-size: 12px;
+  margin: 5px 0 18px;
+}
+
+/* BENEFICIOS */
+.incluye h3 {
+  color: #2B324E;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.beneficio p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  color: #5F6980;
+  margin: 10px 0;
+}
+
+.beneficio ion-icon {
+  color: #5B82BB;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* AGREGAR AL CARRITO */
+ion-button {
+  --background: #313E65;
+  --background-hover: #2B324E;
+  --background-activated: #2B324E;
+  --color: #FFFFFF;
+  --border-radius: 10px;
+  --box-shadow: none;
+
+  min-height: 46px;
+  margin-top: 22px;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+}

@@ -1,0 +1,105 @@
+
+/* Fondo de la pantalla */
+ion-content {
+  --background: #FFFFFF;
+  --color: #2B324E;
+}
+
+/* Título principal */
+ion-text h2 {
+  color: #2B324E;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 12px 0 8px;
+}
+
+/* Descripción del título */
+ion-text p {
+  color: #6B7280;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+/* Contenedor del formulario */
+form {
+  background: #FFFFFF;
+  border: 1px solid #E3E7EA;
+  border-radius: 15px;
+  padding: 18px;
+  margin-bottom: 25px;
+
+  box-shadow: 0 3px 12px rgba(43, 50, 78, 0.05);
+}
+
+/* Campos */
+form ion-item {
+  --background: #F5F7FA;
+  --color: #2B324E;
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+  --border-color: transparent;
+  --border-radius: 10px;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 10px;
+
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+/* Campos al enfocarse */
+form ion-item:focus-within {
+  border-color: #5B82BB;
+}
+
+/* Inputs */
+ion-input,
+ion-textarea,
+ion-select {
+  --color: #2B324E;
+  --placeholder-color: #8992A3;
+  --highlight-color-focused: #5B82BB;
+
+  font-size: 14px;
+}
+
+/* Descripción */
+ion-textarea {
+  min-height: 85px;
+}
+
+/* Botones generales */
+form ion-button {
+  --border-radius: 10px;
+  --box-shadow: none;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: none;
+
+  min-height: 46px;
+}
+
+/* Botón Guardar publicación */
+form ion-button[type="submit"] {
+  --background: #313E65;
+  --background-hover: #2B324E;
+  --color: #FFFFFF;
+
+  margin-top: 24px;
+}
+
+/* Botón deshabilitado */
+form ion-button[type="submit"][disabled] {
+  opacity: 0.6;
+}
+
+/* Botón Cancelar */
+form ion-button[fill="outline"] {
+  --border-color: #5B82BB;
+  --color: #313E65;
+
+  margin-top: 10px;
+  margin-bottom: 4px;
+}

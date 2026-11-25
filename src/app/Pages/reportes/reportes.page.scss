@@ -1,0 +1,247 @@
+
+/* CONTENIDO GENERAL */
+ion-content {
+  --background: #F7F9FC;
+  --color: #2B324E;
+}
+
+/* TÍTULO */
+.titulo h1 {
+  color: #2B324E;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0 5px;
+}
+
+/* DESCRIPCIÓN */
+.descripcion p {
+  color: #7A879D;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+/* BUSCADOR */
+.buscador {
+  --background: #FFFFFF;
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+  --border-radius: 12px;
+  --color: #2B324E;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  min-height: 45px;
+}
+
+.buscador ion-icon {
+  color: #5B82BB;
+  font-size: 20px;
+}
+
+.buscador ion-input {
+  --color: #2B324E;
+  --placeholder-color: #7A879D;
+  font-size: 13px;
+}
+
+/* FILTRO */
+.filtro {
+  --background: #FFFFFF;
+  --padding-start: 12px;
+  --inner-padding-end: 10px;
+  --border-radius: 12px;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 12px;
+  min-height: 45px;
+  margin-bottom: 12px;
+}
+
+.filtro ion-icon {
+  color: #5B82BB;
+  font-size: 18px;
+}
+
+.filtro ion-label,
+.filtro ion-text {
+  font-size: 12px;
+  color: #2B324E;
+}
+
+/* CATEGORÍAS */
+.categorias {
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.categorias ion-row {
+  flex-wrap: nowrap;
+}
+
+.categorias ion-col {
+  padding: 2px;
+  min-width: 0;
+}
+
+/* BOTONES DE CATEGORÍAS */
+.categoria {
+  --background: #FFFFFF;
+  --color: #2B324E;
+  --border-radius: 10px;
+  --box-shadow: none;
+
+  border: 1px solid #E3E7EA;
+  border-radius: 10px;
+  text-transform: none;
+  font-size: 10px;
+  margin: 0;
+  height: 36px;
+}
+
+.categoria ion-icon {
+  font-size: 16px;
+  color: #5B82BB;
+}
+
+.categoria.activa {
+  --background: #313E65;
+  --color: #FFFFFF;
+  border-color: #313E65;
+}
+
+.categoria.activa ion-icon {
+  color: #FFFFFF;
+}
+
+/* TARJETAS */
+.reporte-card {
+  --background: #FFFFFF;
+  color: #2B324E;
+  margin: 0 0 10px;
+  border: 1px solid #E3E7EA;
+  border-radius: 13px;
+  box-shadow: none;
+}
+
+.reporte-card ion-card-content {
+  padding: 12px;
+}
+
+/* FILA SUPERIOR */
+.fila-superior {
+  align-items: center;
+}
+
+.fila-superior ion-col {
+  padding: 0;
+}
+
+/* ETIQUETAS */
+ion-badge {
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 5px 7px;
+  margin-right: 4px;
+}
+
+.codigo {
+  background: #EEF2F7;
+  color: #66758A;
+}
+
+.tipo {
+  background: #EEF2F7;
+  color: #2B324E;
+}
+
+.disponible {
+  background: #DDF5E6;
+  color: #198754;
+}
+
+.revision {
+  background: #FFF0C2;
+  color: #986D00;
+}
+
+/* TÍTULOS DE REPORTES */
+.nombre-reporte h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2B324E;
+  margin: 12px 0 8px;
+  line-height: 1.4;
+}
+
+/* DATOS DE REPORTES */
+.datos-reporte {
+  padding: 0;
+}
+
+.datos-reporte ion-col {
+  padding: 0 3px;
+}
+
+.datos-reporte ion-text p {
+  color: #7A879D;
+  font-size: 11px;
+  margin: 2px 0;
+}
+
+/* ÍCONOS DE REDES SOCIALES */
+.icono-red {
+  width: 27px;
+  height: 27px;
+  font-size: 27px;
+}
+
+/* VER REPORTE */
+.ver-reporte {
+  --background: #313E65;
+  --background-hover: #2B324E;
+  --background-activated: #2B324E;
+  --color: #FFFFFF;
+  --border-radius: 9px;
+  --box-shadow: none;
+
+  height: 34px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: none;
+  margin: 0;
+}
+
+.ver-reporte ion-icon {
+  font-size: 15px;
+}
+
+/* PAGINACIÓN */
+.paginacion {
+  margin-top: 20px;
+  border-top: 1px solid #E3E7EA;
+  padding-top: 12px;
+}
+
+.paginacion ion-col {
+  padding: 2px;
+}
+
+.pagina {
+  --background: #FFFFFF;
+  --color: #313E65;
+  --border-color: #E3E7EA;
+  --border-radius: 7px;
+  --box-shadow: none;
+
+  min-width: 32px;
+  height: 32px;
+  font-size: 12px;
+  margin: 0;
+}
+
+.pagina-activa {
+  --background: #313E65;
+  --color: #FFFFFF;
+}
