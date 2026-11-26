@@ -1,135 +1,200 @@
+
 <ion-content [fullscreen]="true" class="login-content">
 
-    <form [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="iniciarSesion()">
 
     <ion-grid class="login-grid">
-        <ion-row class="ion-justify-content-center">
-            <ion-col size="12" size-md="6" size-lg="4">
-                <!-- Va a ser el item del logo -->
-                <ion-item lines="none" class="logo-item">
-                    <ion-label class="ion-text-center">
-                        <img src="../../../assets/icons/Logo_Marketing_Manager.svg" alt="Logo" class="logo-img">
 
-                        <ion-text>
-                            <h3>Marketing Manager</h3>
-                        </ion-text>
+      <ion-row class="ion-justify-content-center">
 
-                    </ion-label>
+        <ion-col size="12" size-md="6" size-lg="4">
 
-                </ion-item>
+          <!-- Logo -->
+          <ion-item lines="none" class="logo-item">
 
-                <!-- Aqui va a ir el login form -->
-                 <ion-item lines="none" class="titulo-item">
-                    <ion-label class="ion-text-center">
-                        <ion-text>
-                            <h1>Iniciar Sesión</h1>
-                        </ion-text>
+            <ion-label class="ion-text-center">
 
-                        <ion-text color="medium">
-                            <p>Ingresa tu usuario y contraseña</p>
+              <img
+                src="../../../assets/icons/Logo_Marketing_Manager.svg"
+                alt="Logo"
+                class="logo-img">
 
-                        </ion-text>
+              <ion-text>
+                <h3>Marketing Manager</h3>
+              </ion-text>
 
-                    </ion-label>
+            </ion-label>
 
-                 </ion-item>
+          </ion-item>
 
-                 <ion-list>
-                    <ion-item lines="none" class="label-item">
-                        <ion-label>
-                            Usuario
-                        </ion-label>
+          <!-- Título del formulario -->
+          <ion-item lines="none" class="titulo-item">
 
-                    </ion-item>
+            <ion-label class="ion-text-center">
 
-                    <ion-item lines="none" class="input-item" [class.is-invalid]="invalido('username')">
-                        <ion-icon
-                        name="person-outline"
-                        slot="start">
-                        </ion-icon>
+              <ion-text>
+                <h1>Iniciar Sesión</h1>
+              </ion-text>
 
-                        <ion-input
-                        type="text"
-                        placeholder="Ingresa tu usuario o correo electrónico"
-                        formControlName="username">
-                        fill="outline"
-                        </ion-input>
+              <ion-text color="medium">
+                <p>Ingresa tu usuario y contraseña</p>
+              </ion-text>
 
-                        
+            </ion-label>
 
-                    </ion-item>
-                  
+          </ion-item>
 
+          <ion-list>
 
-                    <ion-item lines="none" class="label-item">
-                        <ion-label>
-                            Contraseña
-                        </ion-label>
-                        
-                    </ion-item>
+            <!-- Usuario -->
+            <ion-item lines="none" class="label-item">
+              <ion-label>
+                Usuario
+              </ion-label>
+            </ion-item>
 
-                    <ion-item lines="none" class="input-item" [class.is-invalid]="invalido('password')">
-                    <ion-icon
-                     name="lock-closed-outline"
-                    slot="start">
-                    </ion-icon>
+            <ion-item
+              lines="none"
+              class="input-item"
+              [class.is-invalid]="invalido('username')">
 
-                    <ion-input
-                    [type]="mostrarContrasena ? 'text' : 'password'"
-                    placeholder="Ingresa tu contraseña"
-                    formControlName="password">
-                    </ion-input>
+              <ion-icon
+                name="person-outline"
+                slot="start">
+              </ion-icon>
 
-                    <ion-button
-                    fill="clear"
-                    slot="end"
-                    (click)="mostrarContrasena = !mostrarContrasena">
+              <ion-input
+                type="text"
+                placeholder="Ingresa tu usuario o correo electrónico"
+                formControlName="username"
+                maxlength="15">
+              </ion-input>
 
-                        <ion-icon
-                        [name]="mostrarContrasena 
-                        ? 'eye-off-outline' :
-                        'eye-outline'">
-                        </ion-icon>
+            </ion-item>
 
+            <!-- Error de usuario -->
+            @if (invalido('username')) {
 
-                    </ion-button>
+              <ion-text color="danger">
 
+                <p class="ion-padding-start">
 
-                    </ion-item>
+                  @if (loginForm.controls.username.hasError('required') ||
+                       loginForm.controls.username.hasError('pattern')) {
 
-                   
+                    Ingresa un usuario válido. No puede contener solo espacios.
 
-                 </ion-list>
+                  } @else if (loginForm.controls.username.hasError('minlength')) {
 
-                 <ion-button
-                     expand="block"
-                     class="login-button"
-                     /* [disabled]="loginForm.invalid" */
-                     (click)="iniciarSesion()"
-                     >
+                    El usuario debe tener al menos 3 caracteres.
 
-                    Iniciar sesión
+                  } @else if (loginForm.controls.username.hasError('maxlength')) {
 
-                  <ion-icon
-                  name="arrow-forward-outline"
-                  slot="end">
-                  </ion-icon>
+                    El usuario no puede superar los 30 caracteres.
 
-                 </ion-button>
+                  }
 
-                  @if (invalido('password') || invalido('username')) {
-                            <ion-text color="danger">
-                                <p>Rellene todos los campos correctamente</p>
+                </p>
 
-                            </ion-text>
-                        }
+              </ion-text>
 
+            }
 
-            </ion-col>
+            <!-- Contraseña -->
+            <ion-item lines="none" class="label-item">
+              <ion-label>
+                Contraseña
+              </ion-label>
+            </ion-item>
 
-        </ion-row>
+            <ion-item
+              lines="none"
+              class="input-item"
+              [class.is-invalid]="invalido('password')">
+
+              <ion-icon
+                name="lock-closed-outline"
+                slot="start">
+              </ion-icon>
+
+              <ion-input
+                [type]="mostrarContrasena ? 'text' : 'password'"
+                placeholder="Ingresa tu contraseña"
+                formControlName="password"
+                maxlength="10">
+              </ion-input>
+
+              <!-- Mostrar u ocultar contraseña -->
+              <ion-button
+                fill="clear"
+                type="button"
+                slot="end"
+                (click)="mostrarContrasena = !mostrarContrasena">
+
+                <ion-icon
+                  [name]="mostrarContrasena
+                    ? 'eye-off-outline'
+                    : 'eye-outline'">
+                </ion-icon>
+
+              </ion-button>
+
+            </ion-item>
+
+            <!-- Error de contraseña -->
+            @if (invalido('password')) {
+
+              <ion-text color="danger">
+
+                <p class="ion-padding-start">
+
+                  @if (loginForm.controls.password.hasError('required') ||
+                       loginForm.controls.password.hasError('pattern')) {
+
+                    La contraseña no puede estar vacía ni contener solo espacios.
+
+                  } @else if (loginForm.controls.password.hasError('minlength')) {
+
+                    La contraseña debe tener al menos 3 caracteres.
+
+                  } @else if (loginForm.controls.password.hasError('maxlength')) {
+
+                    La contraseña no puede superar los 50 caracteres.
+
+                  }
+
+                </p>
+
+              </ion-text>
+
+            }
+
+          </ion-list>
+
+          <!-- Botón iniciar sesión -->
+          <ion-button
+            expand="block"
+            class="login-button"
+            type="submit"
+            [disabled]="guardando">
+
+            {{ guardando ? 'Iniciando sesión...' : 'Iniciar sesión' }}
+
+            <ion-icon
+              name="arrow-forward-outline"
+              slot="end">
+            </ion-icon>
+
+          </ion-button>
+
+        </ion-col>
+
+      </ion-row>
+
     </ion-grid>
 
-    </form>
+  </form>
 
 </ion-content>

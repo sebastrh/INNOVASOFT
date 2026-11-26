@@ -23,9 +23,19 @@
         label="Título"
         labelPlacement="stacked"
         placeholder="Nombre de la publicación"
-        formControlName="titulo">
+        formControlName="titulo"
+        maxlength="30">
       </ion-input>
     </ion-item>
+
+    @if (formulario.controls.titulo.touched &&
+         formulario.controls.titulo.invalid) {
+      <ion-text color="danger">
+        <p class="ion-padding-start">
+          El título debe tener entre 3 y 30 caracteres y no puede contener solo espacios.
+        </p>
+      </ion-text>
+    }
 
     <!-- Descripción -->
     <ion-item>
@@ -34,9 +44,19 @@
         labelPlacement="stacked"
         placeholder="Escribe la descripción"
         formControlName="descripcion"
+        maxlength="200"
         rows="3">
       </ion-textarea>
     </ion-item>
+
+    @if (formulario.controls.descripcion.touched &&
+         formulario.controls.descripcion.invalid) {
+      <ion-text color="danger">
+        <p class="ion-padding-start">
+          La descripción debe tener entre 10 y 200 caracteres y no puede contener solo espacios.
+        </p>
+      </ion-text>
+    }
 
     <!-- Cliente -->
     <ion-item>
@@ -44,9 +64,19 @@
         label="Cliente"
         labelPlacement="stacked"
         placeholder="Nombre del cliente"
-        formControlName="cliente">
+        formControlName="cliente"
+        maxlength="100">
       </ion-input>
     </ion-item>
+
+    @if (formulario.controls.cliente.touched &&
+         formulario.controls.cliente.invalid) {
+      <ion-text color="danger">
+        <p class="ion-padding-start">
+          El cliente debe tener entre 2 y 100 caracteres y no puede contener solo espacios.
+        </p>
+      </ion-text>
+    }
 
     <!-- Plataforma -->
     <ion-item>
@@ -76,6 +106,15 @@
       </ion-input>
     </ion-item>
 
+    @if (formulario.controls.fecha.touched &&
+         formulario.controls.fecha.invalid) {
+      <ion-text color="danger">
+        <p class="ion-padding-start">
+          Selecciona una fecha.
+        </p>
+      </ion-text>
+    }
+
     <!-- Hora -->
     <ion-item>
       <ion-input
@@ -85,6 +124,15 @@
         formControlName="hora">
       </ion-input>
     </ion-item>
+
+    @if (formulario.controls.hora.touched &&
+         formulario.controls.hora.invalid) {
+      <ion-text color="danger">
+        <p class="ion-padding-start">
+          Selecciona una hora.
+        </p>
+      </ion-text>
+    }
 
     <!-- Estado -->
     <ion-item>
@@ -108,7 +156,7 @@
     <ion-button
       expand="block"
       type="submit"
-      [disabled]="formulario.invalid || guardando">
+      [disabled]="guardando">
       Guardar publicación
     </ion-button>
 

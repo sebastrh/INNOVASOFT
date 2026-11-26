@@ -54,15 +54,30 @@ export class CrearPublicacionPage {
   formulario = new FormGroup({
     titulo: new FormControl('', {
       nonNullable: true,
-      validators: [Validators.required]
+      validators: [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(100),
+        Validators.pattern(/.*\S.*/)
+      ]
     }),
     descripcion: new FormControl('', {
       nonNullable: true,
-      validators: [Validators.required]
+      validators: [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(500),
+        Validators.pattern(/.*\S.*/)
+      ]
     }),
     cliente: new FormControl('', {
       nonNullable: true,
-      validators: [Validators.required]
+      validators: [
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(80),
+        Validators.pattern(/.*\S.*/)
+      ]
     }),
     plataforma: new FormControl('Instagram', {
       nonNullable: true,
@@ -84,8 +99,28 @@ export class CrearPublicacionPage {
 
   async crearPublicacion(): Promise<void> {
 
-    if (this.formulario.invalid || this.guardando) {
+    if (this.guardando) {
+      return;
+    }
+
+    const titulo = this.formulario.controls.titulo.value.trim();
+    const descripcion = this.formulario.controls.descripcion.value.trim();
+    const cliente = this.formulario.controls.cliente.value.trim();
+
+    this.formulario.patchValue({
+      titulo,
+      descripcion,
+      cliente
+    });
+
+    if (this.formulario.invalid) {
       this.formulario.markAllAsTouched();
+
+      await this.alerta.mostrarAlerta(
+        'Formulario inválido',
+        'Revisa los campos. No pueden contener solo espacios y deben cumplir con la longitud requerida.'
+      );
+
       return;
     }
 
@@ -118,9 +153,7 @@ export class CrearPublicacionPage {
     }
   }
 
-
-cancelar(): void {
-  this.router.navigate(['/publicaciones']);
-}
-
+  cancelar(): void {
+    this.router.navigate(['/publicaciones']);
+  }
 }
